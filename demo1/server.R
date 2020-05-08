@@ -9,8 +9,8 @@ shinyServer(function(input, output) {
     hist(faithful$eruptions,
          probability = TRUE,
          breaks = as.numeric(input$n_breaks),
-         xlab = "持续时间",
-         main = "喷发持续时间")
+         xlab = "time",
+         main = "time")
     
     # 是否显示individual_obs
     if (input$individual_obs) {
