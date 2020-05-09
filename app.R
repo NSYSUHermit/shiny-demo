@@ -30,7 +30,7 @@ ui = shinyUI(bootstrapPage(
 #server
 library(shiny)
 
-server = shinyServer(function(input, output) {
+server =function(input, output) {
     
     # 输出到UI的main_plot
     output$main_plot <- renderPlot({
@@ -54,5 +54,5 @@ server = shinyServer(function(input, output) {
         }
         
     })
-})
-shinyApp(ui.server)
+}
+shinyApp(ui=ui, server = server)
